@@ -1,6 +1,9 @@
 language: python
 python:
   - "3.8.5"
-# command to install dependencies
+  
 install:
-  - pip install -r requirements.txt
+  - pip install -r ci-test/requirements.txt
+
+script:
+  - ansible-lint ./*.yml
