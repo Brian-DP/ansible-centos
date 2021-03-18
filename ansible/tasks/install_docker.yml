@@ -1,0 +1,21 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install yum utils
+      yum:  
+        name: yum-utils
+        state: present
+
+    - name: Set up repository
+      yum_repository: 
+        name: docker
+        baseurl: https://download.docker.com/linux/centos/docker-ce.repo
+
+    - name: Install docker engine
+      yum: 
+        name: 
+          - docker-ce 
+          - docker-ce-cli 
+          - containerd.io
+        state: present
+    

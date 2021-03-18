@@ -1,8 +1,0 @@
-plugin: gcp_compute
-projects: 
-  - <gcp_project_id>
-regions: 
-  - <gcp_project_region>
-filters: []
-auth_kind: <gcp_project_auth_kind>
-service_account_file: <path_to__.json_file>
