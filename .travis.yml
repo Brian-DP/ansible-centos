@@ -8,4 +8,3 @@ install:
 
 script:
   - ansible-lint ansible/tasks/*.yml
-  - ansible-lint ansible/*.yml
