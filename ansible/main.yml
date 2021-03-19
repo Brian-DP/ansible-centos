@@ -2,3 +2,17 @@
   tasks:
     - name: Install docker on all hosts
       import_tasks: tasks/install_docker.yml
+
+    - name: Setup docker on all hosts
+      import_tasks: tasks/setup_docker.yml
+    
+- hosts: manager
+  tasks:
+    - name: Setup swarm
+      import_tasks: tasks/setup_swarm.yml
+    
+- hosts: workers
+  tasks:
+    - name: Add workers to swarm
+      import_tasks: tasks/join_workers.yml
+

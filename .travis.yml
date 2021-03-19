@@ -7,6 +7,4 @@ install:
   - pip install ansible-lint
 
 script:
-
-  - ansible-lint -x command-shell ansible/*/*.yml
-  - ansible-lint ansible/*.yml
+  - ansible-lint -x command-shell ansible/*.yml

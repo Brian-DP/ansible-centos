@@ -5,4 +5,11 @@
 - name: Install Docker CE
   shell: dnf install docker-ce --nobest -y
 
+- name: Install pip
+  shell: dnf install python3 -y
+
+- name: Install Docker SDK
+  pip:
+    name: docker-py
+
     

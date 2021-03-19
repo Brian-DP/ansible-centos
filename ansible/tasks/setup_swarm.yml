@@ -1,0 +1,9 @@
+- name: Init swarm on manager node
+  community.docker.docker_swarm:
+    advertise_addr: 192.168.99.10
+    state: present
+  register: result
+    
+- name: Save the worker token 
+  set_fact:
+    worker_token: "{{ result.swarm_facts.JoinTokens.Worker }}"

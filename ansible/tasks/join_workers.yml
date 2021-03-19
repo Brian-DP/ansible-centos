@@ -1,0 +1,6 @@
+- name: Add worker nodes
+  community.docker.docker_swarm:
+    state: join
+    advertise_addr: 192.168.99.11
+    join_token: "{{ hostvars['192.168.99.10']['worker_token'] }}"
+    remote_addrs: [ '192.168.99.10' ]
