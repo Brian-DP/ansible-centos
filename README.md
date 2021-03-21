@@ -5,8 +5,8 @@ I used Vagrant for the preovision of two CentOS VMs on VirtualBox and an Ansible
 
 Tested on Ubuntu 20.04.2 LTS
 ## Technologies used
-Ansible 2.9.6
-Vagrant 2.2.6
+* Ansible 2.9.6
+* Vagrant 2.2.6
 ## Additional note 
 The additional linter command in .travis-yml  
 ```
